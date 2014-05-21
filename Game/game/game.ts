@@ -23,7 +23,7 @@ for (var key in Resources) {
 
 //game.isDebug = true;
 
-var obstacleLocations = [200, -800, -1200, -1600, -2200, -2500, -3500, -3800, -4200, -6000, -8000, -10000, -10300, -10600];
+var obstacleLocations = [200, -800, -1200, -1600, -2200, -2550, -3500, -3800, -4200, -6000, -7000, -7500, -7880, -8400, -8700, -9500 -10000, -10300, -10600, -10900, -11200];
 var mainLevel = new Level(obstacleLocations);
 
 var startGame = () => {
