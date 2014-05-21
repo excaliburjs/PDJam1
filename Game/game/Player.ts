@@ -18,8 +18,11 @@
       });
 
       this.on('collision', (ev: ex.CollisionEvent) => {
+         if (this.x <= Config.levelEnd) {
+            game.goToScene("victory");
+         }
          if (ev.other instanceof Obstacle) {
-            game.goToScene("defeat");
+            //game.goToScene("defeat");
             this.color = ex.Color.Magenta;
          }
          if (ev.side === ex.Side.Bottom) {

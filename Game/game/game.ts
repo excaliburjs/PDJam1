@@ -23,18 +23,12 @@ for (var key in Resources) {
 
 //game.isDebug = true;
 
-var obstacleLocations = [200, -800, -1200, -1600, -2200, -2550, -3500, -3800, -4200, -6000, -7000, -7500, -7880, -8400, -8700, -9500 -10000, -10300, -10600, -10900, -11200];
+var obstacleLocations = [200, -800, -1200, -1600, -2200, -2550, -3500, -3800, -4200, -6000, -7000, -7500, -7880, -8400, -8700, -9500 -10000, -10300, -10600, -10900, -11300];
 var mainLevel = new Level(obstacleLocations);
 
 var startGame = () => {
-   //if (game.currentScene !== mainLevel) {
-   //   game.off("keyup", startGame);
-      // todo
-      // bg
-      // moon
-      // mountains
-      // fence
-      // ground
+   if (game.currentScene !== mainLevel) {
+      game.off("keyup", startGame);
 
       game.addScene("level", mainLevel);
       game.addScene("victory", new VictoryScene());
@@ -42,15 +36,34 @@ var startGame = () => {
 
       game.on("keyup", startGame);
       game.goToScene("level");
-   //}
+   }
 }
 
 game.start(loader).then(() => {
-   //game.on("keyup", startGame);
+
+   // TODO:
+   // mountains
+   // fence
+   // ground
+
+   var startScreen = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);
+   startScreen.addDrawing("background", new ex.Sprite(Resources.TextureBackground, 0, 0, game.width, game.height));
+   startScreen.collisionType = ex.CollisionType.PreventCollision;
+   game.addChild(startScreen);
+
+   var moon = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);
+   moon.addDrawing("moon", new ex.Sprite(Resources.TextureMoon, -400, 0, game.width, game.height));
+   moon.collisionType = ex.CollisionType.PreventCollision;
+   game.addChild(moon);
+
+   var logo = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);
+   logo.addDrawing("logo", new ex.Sprite(Resources.TextureLogo, -400, -300, game.width, game.height));
+   logo.collisionType = ex.CollisionType.PreventCollision;
+   game.addChild(logo);
+
    game.addScene("level", mainLevel);
    game.addScene("victory", new VictoryScene());
    game.addScene("defeat", new DefeatScene());
 
-   //game.on("keyup", startGame);
-   game.goToScene("level");
+   game.on("keyup", startGame);
 });

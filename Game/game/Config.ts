@@ -2,6 +2,7 @@
 
    static gravity: number = 800;
    static cameraOffset: number = 150;
+   static levelEnd: number = -12000;
 
    // obstacles
    static obstacleWidth: number = 50;
