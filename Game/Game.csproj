@@ -19,6 +19,12 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="app.js" />
+    <Content Include="images\background.gif" />
+    <Content Include="images\fence.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\moon.png" />
+    <Content Include="images\mountains.png" />
+    <Content Include="images\tree-1.gif" />
     <Content Include="index.html" />
     <Content Include="scripts\Excalibur.js" />
     <Content Include="web.config" />
@@ -33,7 +39,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
     <Folder Include="sounds\" />
   </ItemGroup>
   <ItemGroup>
