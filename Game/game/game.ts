@@ -1,5 +1,6 @@
 ﻿/// <reference path="../scripts/Excalibur.d.ts" />
 /// <reference path="Config.ts" />
+/// <reference path="Level.ts" />
 /// <reference path="Obstacle.ts" />
 /// <reference path="Player.ts" />
 /// <reference path="VictoryScene.ts" />
@@ -20,43 +21,36 @@ for (var key in Resources) {
    }
 }
 
+//game.isDebug = true;
+
+var obstacleLocations = [200, -800, -1200, -1600, -2200, -2500, -3500, -3800, -4200, -6000, -8000, -10000, -10300, -10600];
+var mainLevel = new Level(obstacleLocations);
+
+var startGame = () => {
+   //if (game.currentScene !== mainLevel) {
+   //   game.off("keyup", startGame);
+      // todo
+      // bg
+      // moon
+      // mountains
+      // fence
+      // ground
+
+      game.addScene("level", mainLevel);
+      game.addScene("victory", new VictoryScene());
+      game.addScene("defeat", new DefeatScene());
+
+      game.on("keyup", startGame);
+      game.goToScene("level");
+   //}
+}
+
 game.start(loader).then(() => {
-   logger.info("All Resources have finished loading");
-
-   // todo
-   // bg
-   // moon
-   // mountains
-   // fence
-   // ground
-
-   var ichabod = new Player(900, 300, ex.Color.Blue);
-
-   var horseman = new Enemy(1100, 300, ex.Color.Red);
-   game.addChild(horseman);
-
-   var floor = new ex.Actor(200, 350, 10000, 10, ex.Color.Green);
-   floor.collisionType = ex.CollisionType.Fixed;
-   game.addChild(floor);
-
-   var testRock1 = new Obstacle(700, 350, ex.Color.Orange);
-   testRock1.collisionType = ex.CollisionType.Fixed;
-   game.addChild(testRock1);
-
-   var testRock2 = new Obstacle(500, 350, ex.Color.Orange);
-   testRock2.collisionType = ex.CollisionType.Fixed;
-   game.addChild(testRock2);
-
-   var testRock3 = new Obstacle(200, 350, ex.Color.Orange);
-   testRock3.collisionType = ex.CollisionType.Fixed;
-   game.addChild(testRock3);
-
-   var camera = new ex.SideCamera(game);
-   camera.setActorToFollow(ichabod);
-   game.camera = camera;
-
-   game.addChild(ichabod);
-
+   //game.on("keyup", startGame);
+   game.addScene("level", mainLevel);
    game.addScene("victory", new VictoryScene());
-   game.addScene("defeat", new DefeatScene());   
+   game.addScene("defeat", new DefeatScene());
+
+   //game.on("keyup", startGame);
+   game.goToScene("level");
 });

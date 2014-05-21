@@ -8,5 +8,10 @@
    public onInitialize(game: ex.Engine) {
       this.dx = Config.playerMovementSpeed;
       this.collisionType = ex.CollisionType.Passive;
+
+      this.on('update', (ev: ex.UpdateEvent) => {
+         this.dx += Config.horsemanSpeedIncrease;
+      });
    }
+
 }

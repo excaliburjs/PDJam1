@@ -20,7 +20,7 @@
       this.on('collision', (ev: ex.CollisionEvent) => {
          if (ev.other instanceof Obstacle) {
             game.goToScene("defeat");
-            //this.color = ex.Color.Magenta;
+            this.color = ex.Color.Magenta;
          }
          if (ev.side === ex.Side.Bottom) {
             this.isColliding = true;
@@ -51,6 +51,8 @@
             ev.target.ay = 0;
          }
          this.isColliding = false;
+
+         //game.camera.setFocus(this.x, this.y);
       });
    }
 
