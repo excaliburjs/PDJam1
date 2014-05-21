@@ -48,6 +48,7 @@
     <TypeScriptCompile Include="game\game.ts" />
     <TypeScriptCompile Include="game\Obstacle.ts" />
     <TypeScriptCompile Include="game\Player.ts" />
+    <TypeScriptCompile Include="game\Resources.ts" />
     <TypeScriptCompile Include="game\VictoryScene.ts" />
     <TypeScriptCompile Include="scripts\Excalibur.d.ts" />
   </ItemGroup>
