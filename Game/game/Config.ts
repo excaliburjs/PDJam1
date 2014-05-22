@@ -19,6 +19,7 @@
    static playerMovementSpeed: number = -350;
    static playerJumpSpeed: number = 330;
    static playerXPos: number = 960 / 2;
+   static gallopDelay: number = 600;
    //static playerYPos: number = Config.obstacleYPosition-5;
    
    // the headless horseman

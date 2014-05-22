@@ -27,6 +27,8 @@
     <Content Include="images\tree-1.gif" />
     <Content Include="index.html" />
     <Content Include="scripts\Excalibur.js" />
+    <Content Include="sounds\gallop.mp3" />
+    <Content Include="sounds\gallop.wav" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -38,9 +40,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="sounds\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <TypeScriptCompile Include="game\Config.ts" />
     <TypeScriptCompile Include="game\DefeatScene.ts" />
