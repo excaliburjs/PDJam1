@@ -16,7 +16,7 @@
       this.addChild(startScreen);
 
       // moon
-      Parallax.create(this, 700, 0, game.width, game.height, Resources.TextureMoon, Config.moonSpeed);      
+      Parallax.create(this, 500, 0, game.width, game.height, Resources.TextureMoon, Config.moonSpeed);      
 
       // mountains
       Parallax.create(this, 0, 0, game.width, game.height, Resources.TextureMountains, Config.mountainSpeed);

@@ -23,7 +23,7 @@ class ParallaxActor extends ex.Actor {
 
    public update(engine: ex.Engine, delta: number) {
       if (this.isOffScreen) {
-         this.x = this.speed > 0 ? this.x - (this.getWidth() * 2) : this.x + this.getWidth();
+         this.x = this.speed > 0 ? this.x - (this.getWidth() * 2) : this.x + (this.getWidth() * 2);
       }
 
       super.update(engine, delta);      

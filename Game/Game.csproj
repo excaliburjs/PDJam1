@@ -29,6 +29,8 @@
     <Content Include="scripts\Excalibur.js" />
     <Content Include="sounds\gallop.mp3" />
     <Content Include="sounds\gallop.wav" />
+    <Content Include="sounds\intro.mp3" />
+    <Content Include="sounds\intro.wav" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
