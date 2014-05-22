@@ -20,8 +20,8 @@
 
       this.on('collision', (ev: ex.CollisionEvent) => {
          if (ev.other instanceof Obstacle) {
-            //game.goToScene("defeat");
-            this.color = ex.Color.Magenta;
+            game.goToScene("defeat");
+            //this.color = ex.Color.Magenta;
          }
          if (ev.side === ex.Side.Bottom) {
             this.isColliding = true;
