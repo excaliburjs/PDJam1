@@ -6,5 +6,6 @@
 
    public onInitialize(game: ex.Engine) {
       this.collisionType = ex.CollisionType.Fixed;
+      this.dx = -Config.playerMovementSpeed;
    }
 }

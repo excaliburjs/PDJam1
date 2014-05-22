@@ -49,6 +49,7 @@
     <TypeScriptCompile Include="game\Level.ts" />
     <TypeScriptCompile Include="game\ModifiedCamera.ts" />
     <TypeScriptCompile Include="game\Obstacle.ts" />
+    <TypeScriptCompile Include="game\Parallax.ts" />
     <TypeScriptCompile Include="game\Player.ts" />
     <TypeScriptCompile Include="game\Resources.ts" />
     <TypeScriptCompile Include="game\VictoryScene.ts" />

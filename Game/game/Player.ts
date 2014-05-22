@@ -3,13 +3,11 @@
    public inAir = false;
 
    constructor(x?: number, y?: number, color?: ex.Color) {
-      super(x, y, Config.playerWidth, Config.playerHeight, color);
+      super(x, y, Config.playerWidth, Config.playerHeight, color);      
    }
 
    public onInitialize(game: ex.Engine) {
-      this.dx = Config.playerMovementSpeed;
 
-      
       this.addEventListener('up', () => {
          if (!this.inAir) {
             this.dy -= Config.playerJumpSpeed;
