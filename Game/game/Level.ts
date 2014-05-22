@@ -16,7 +16,7 @@
       this.addChild(startScreen);
 
       // moon
-      Parallax.create(this, 500, 0, game.width, game.height, Resources.TextureMoon, Config.moonSpeed);      
+      Parallax.create(this, 500, 0, 471, 152, Resources.TextureMoon, Config.moonSpeed);      
 
       // mountains
       Parallax.create(this, 0, 0, game.width, game.height, Resources.TextureMountains, Config.mountainSpeed);
@@ -32,7 +32,7 @@
       }
 
       // ground
-      var floor = new ex.Actor(0, Config.obstacleYPosition, 960, 10, ex.Color.Green);
+      var floor = new ex.Actor(0, Config.obstacleYPosition, game.width, 60, ex.Color.Black);
       floor.anchor.x = floor.anchor.y = 0;
       floor.collisionType = ex.CollisionType.Fixed;
       this.addChild(floor);

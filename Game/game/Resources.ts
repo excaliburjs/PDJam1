@@ -14,6 +14,7 @@
    // Sounds
    //
    SoundIntro: new ex.Sound("sounds/intro.mp3", "sounds/intro.wav"),
+   SoundWind: new ex.Sound("sounds/wind.mp3", "sounds/wind.wav"),
    SoundGallop: new ex.Sound("sounds/gallop.mp3", "sounds/gallop.wav")
 
 } 

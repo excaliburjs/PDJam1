@@ -35,8 +35,6 @@ var startGame = () => {
    if (game.currentScene !== mainLevel) {
       game.off("keyup", startGame);
 
-      Resources.SoundIntro.stop();
-
       game.addScene("level", mainLevel);
       game.addScene("victory", new VictoryScene());
       game.addScene("defeat", new DefeatScene());
@@ -48,7 +46,8 @@ var startGame = () => {
 
 game.start(loader).then(() => {
 
-   Resources.SoundIntro.setLoop(true);
+   Resources.SoundWind.setLoop(true);
+   Resources.SoundWind.play();
    Resources.SoundIntro.play();
 
    var startScreen = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);
@@ -57,13 +56,26 @@ game.start(loader).then(() => {
    game.addChild(startScreen);
 
    // moon
-   Parallax.create(game.currentScene, 500, 0, game.width, game.height, Resources.TextureMoon, Config.moonSpeed);
+   Parallax.create(game.currentScene, 500, 0, 471, 152, Resources.TextureMoon, Config.moonSpeed);
 
    // mountains
    Parallax.create(game.currentScene, 0, 0, game.width, game.height, Resources.TextureMountains, 0);
 
+   // tree
+   var tree = new ex.Actor(300, Config.obstacleYPosition + 15, 385, 519);
+   tree.anchor.y = 1;
+   tree.collisionType = ex.CollisionType.PreventCollision;
+   tree.addDrawing("default", new ex.Sprite(Resources.TextureTree1, 0, 0, 385, 519));
+   game.add(tree);
+
    // fence
    Parallax.create(game.currentScene, 0, 0, game.width, game.height, Resources.TextureFence, 0);
+
+   // ground
+   var ground = new ex.Actor(0, Config.obstacleYPosition, game.width, 60, ex.Color.Black);
+   ground.anchor.x = ground.anchor.y = 0;
+   ground.collisionType = ex.CollisionType.Fixed;
+   game.add(ground);
 
    var logo = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);
    logo.addDrawing("logo", new ex.Sprite(Resources.TextureLogo, -400, -300, game.width, game.height));

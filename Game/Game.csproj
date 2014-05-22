@@ -31,6 +31,8 @@
     <Content Include="sounds\gallop.wav" />
     <Content Include="sounds\intro.mp3" />
     <Content Include="sounds\intro.wav" />
+    <Content Include="sounds\wind.mp3" />
+    <Content Include="sounds\wind.wav" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
