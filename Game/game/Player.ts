@@ -9,6 +9,8 @@
 
    public onInitialize(game: ex.Engine) {
 
+      this.collisionType = ex.CollisionType.Active;
+
       this.addEventListener('up', () => {
          if (!this.inAir) {
             this.dy -= Config.playerJumpSpeed;

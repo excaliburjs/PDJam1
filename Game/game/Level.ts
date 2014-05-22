@@ -43,8 +43,9 @@
       this.addChild(horseman);
 
       // player
-      var yPos = Config.obstacleYPosition - Config.playerHeight / 2;
-      var ichabod = new Player(Config.playerXPos, yPos, ex.Color.Blue);
+      var playerYPos = Config.obstacleYPosition - Config.playerHeight / 2;
+      var ichabod = new Player(Config.playerXPos, playerYPos, ex.Color.Blue);
+      ichabod.collisionType = ex.CollisionType.PreventCollision;
       this.addChild(ichabod);
 
       var victoryTrigger = new ParallaxTrigger(15000, Config.obstacleYPosition, 50, 200, () => {
