@@ -4,8 +4,8 @@
    static cameraOffset: number = 150;
 
    // parallax background
-   static moonSpeed = 3;
-   static mountainSpeed = 30;
+   static moonSpeed = -3;
+   static mountainSpeed = -30;
    
    // obstacles
    static obstacleWidth: number = 50;
