@@ -19,9 +19,6 @@
       });
 
       this.on('collision', (ev: ex.CollisionEvent) => {
-         if (this.x <= Config.levelEnd) {
-            game.goToScene("victory");
-         }
          if (ev.other instanceof Obstacle) {
             //game.goToScene("defeat");
             this.color = ex.Color.Magenta;

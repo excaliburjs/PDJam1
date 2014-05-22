@@ -37,20 +37,28 @@
       floor.collisionType = ex.CollisionType.Fixed;
       this.addChild(floor);
 
+      // headless horseman
+      var horsemanYPos = Config.obstacleYPosition - Config.horsemanHeight / 2;
+      var horseman = new Enemy(Config.horsemanXPos, horsemanYPos, ex.Color.Red);
+      this.addChild(horseman);
+
       // player
       var yPos = 270;//Config.obstacleYPosition - Config.playerHeight / 2;
       var ichabod = new Player(Config.playerXPos, yPos, ex.Color.Blue);
       this.addChild(ichabod);
+
+      var victoryTrigger = new ParallaxTrigger(15000, Config.obstacleYPosition, 50, 200, () => {
+         game.goToScene("victory");
+      }, -Config.playerMovementSpeed);
+      victoryTrigger.repeats = -1;
+      victoryTrigger.target = ichabod;
+      game.addChild(victoryTrigger);
 
       //var camera = new ex.SideCamera(game);
       //var camera = new ModifiedCamera(game);
       //camera.setActorToFollow(ichabod);
       //game.camera = camera;
 
-      var horsemanYPos = Config.obstacleYPosition - Config.horsemanHeight / 2;
-      var horseman = new Enemy(Config.horsemanXPos, horsemanYPos, ex.Color.Red);
-      //horseman.follow(ichabod, Config.startingFollowDistance);
-      this.addChild(horseman);
    }
 
 }

@@ -2,7 +2,6 @@
 
    static gravity: number = 800;
    static cameraOffset: number = 150;
-   static levelEnd: number = -12000;
 
    static moonSpeed = 3;
    static mountainSpeed = 30;
@@ -16,7 +15,7 @@
    // the player
    static playerWidth: number = 150;
    static playerHeight: number = 150;
-   static playerMovementSpeed: number = -350;
+   static playerMovementSpeed: number = 350;
    static playerJumpSpeed: number = 330;
    static playerXPos: number = 960 / 2;
    static gallopDelay: number = 600;
@@ -25,8 +24,8 @@
    // the headless horseman
    static horsemanWidth: number = 150;
    static horsemanHeight: number = 150;
-   static horsemanXPos: number = 960;
-   static horsemanSpeedIncrease: number = -0.005;
-   static horsemanInitialSpeed = -1;
+   static horsemanXPos: number = 0;
+   static horsemanSpeedIncrease: number = 0.005;
+   static horsemanInitialSpeed = 1;
    //static startingFollowDistance: number = 200; //doesn't work, following in the y direction also, so shudders around
 }

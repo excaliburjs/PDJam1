@@ -29,3 +29,13 @@ class ParallaxActor extends ex.Actor {
       super.update(engine, delta);      
    }
 } 
+
+class ParallaxTrigger extends ex.Trigger {
+
+   constructor(x: number, y: number, width: number, height: number, action: () => void, private speed: number) {
+      super(x, y, width, height, action);
+      this.repeats = -1;
+
+      this.dx = speed;
+   }
+}

@@ -13,6 +13,13 @@ var game = new ex.Engine(960, 600, "game");
 game.setAntialiasing(false);
 game.backgroundColor = ex.Color.Black;
 
+game.addEventListener('keydown', (keyDown?: ex.KeyDown) => {
+
+   if (keyDown.key === ex.InputKey.D) {
+      game.isDebug = !game.isDebug;
+   }
+});
+
 var loader = new ex.Loader();
 
 for (var key in Resources) {
@@ -21,9 +28,8 @@ for (var key in Resources) {
    }
 }
 
-//game.isDebug = true;
-
-var obstacleLocations = [200, -800, -1200, -1600, -2200, -2550, -3500, -3800, -4200, -6000, -7000, -7500, -7880, -8400, -8700, -9500 -10000, -10300, -10600, -10900, -11300];
+//var obstacleLocations = [200, -800, -1200, -1600, -2200, -2550, -3500, -3800, -4200, -6000, -7000, -7500, -7880, -8400, -8700, -9500 -10000, -10300, -10600, -10900, -11300];
+var obstacleLocations = [2000, 3000, 3400, 3800, 4600, 4950, 5900, 6200, 6600, 8400, 9400, 9900, 10280, 10800, 11100, 11900, 12400, 12700, 13000, 13300, 13700];
 var mainLevel = new Level(obstacleLocations);
 
 var startGame = () => {
