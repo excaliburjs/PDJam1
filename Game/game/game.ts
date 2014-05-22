@@ -82,6 +82,27 @@ game.start(loader).then(() => {
    logo.collisionType = ex.CollisionType.PreventCollision;
    game.addChild(logo);
 
+   var emitter = new ex.ParticleEmitter(0, Config.obstacleYPosition, 960, 0);
+   emitter.emitterType = ex.EmitterType.Rectangle;
+   emitter.radius = 5;
+   emitter.minVel = 3;
+   emitter.maxVel = 56;
+   emitter.minAngle = 0;
+   emitter.maxAngle = 6.2;
+   emitter.isEmitting = true;
+   emitter.emitRate = 10;
+   emitter.opacity = 0.005;
+   emitter.fadeFlag = true;
+   emitter.particleLife = 4000;
+   emitter.maxSize = 200;
+   emitter.minSize = 133;
+   //emitter.startSize = 11;
+   //emitter.endSize = 200;
+   emitter.acceleration = new ex.Vector(0, 0);
+   emitter.beginColor = new ex.Color(255, 255, 255, 0.005);
+   emitter.endColor = new ex.Color(255, 255, 255, 0);
+   game.add(emitter);
+
    game.addScene("level", mainLevel);
    game.addScene("victory", new VictoryScene());
    game.addScene("defeat", new DefeatScene());
