@@ -1,5 +1,12 @@
 ﻿body {
     font-family: 'Segoe UI', sans-serif;
+    background: black;
+    color: white;
+}
+
+#wrapper {
+    margin: 0 auto;
+    max-width: 960px;
 }
 
 span {
