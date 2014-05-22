@@ -38,13 +38,11 @@
       this.addChild(floor);
 
       // headless horseman
-      var horsemanYPos = Config.obstacleYPosition - Config.horsemanHeight / 2;
-      var horseman = new Enemy(Config.horsemanXPos, horsemanYPos, ex.Color.Red);
+      var horseman = new Enemy(Config.horsemanXPos, Config.horsemanYPos, ex.Color.Red);
       this.addChild(horseman);
 
       // player
-      var playerYPos = Config.obstacleYPosition - Config.playerHeight / 2;
-      var ichabod = new Player(Config.playerXPos, playerYPos, ex.Color.Blue);
+      var ichabod = new Player(Config.playerXPos, Config.playerYPos, ex.Color.Blue);
       ichabod.collisionType = ex.CollisionType.PreventCollision;
       this.addChild(ichabod);
 

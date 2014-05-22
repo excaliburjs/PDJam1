@@ -20,12 +20,13 @@
    static playerJumpSpeed: number = 330;
    static playerXPos: number = 960 / 2;
    static gallopDelay: number = 600;
-   //static playerYPos: number = Config.obstacleYPosition-5;
+   static playerYPos: number = Config.obstacleYPosition - Config.playerHeight / 2;
    
    // the headless horseman
    static horsemanWidth: number = 150;
    static horsemanHeight: number = 150;
    static horsemanXPos: number = 0;
+   static horsemanYPos: number = Config.obstacleYPosition - Config.horsemanHeight / 2;
    static horsemanSpeedIncrease: number = 0.005;
    static horsemanInitialSpeed = 1;
 }
