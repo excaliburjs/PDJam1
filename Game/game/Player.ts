@@ -7,8 +7,6 @@
       super(x, y, Config.playerWidth, Config.playerHeight, color);      
    }
 
-
-
    public onInitialize(game: ex.Engine) {
 
       this.addEventListener('up', () => {

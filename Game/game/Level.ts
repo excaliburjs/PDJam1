@@ -43,7 +43,7 @@
       this.addChild(horseman);
 
       // player
-      var yPos = 270;//Config.obstacleYPosition - Config.playerHeight / 2;
+      var yPos = Config.obstacleYPosition - Config.playerHeight / 2;
       var ichabod = new Player(Config.playerXPos, yPos, ex.Color.Blue);
       this.addChild(ichabod);
 

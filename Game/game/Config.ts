@@ -3,6 +3,7 @@
    static gravity: number = 800;
    static cameraOffset: number = 150;
 
+   // parallax background
    static moonSpeed = 3;
    static mountainSpeed = 30;
    
@@ -27,5 +28,4 @@
    static horsemanXPos: number = 0;
    static horsemanSpeedIncrease: number = 0.005;
    static horsemanInitialSpeed = 1;
-   //static startingFollowDistance: number = 200; //doesn't work, following in the y direction also, so shudders around
 }
