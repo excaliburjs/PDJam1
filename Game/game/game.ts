@@ -30,16 +30,19 @@ for (var key in Resources) {
 
 var obstacleLocations = [2000, 3000, 3400, 3800, 4600, 4950, 5900, 6200, 6600, 8400, 9400, 9900, 10300, 10800, 11100, 11900, 12400, 12800, 13200, 13600, 14000];
 var mainLevel = new Level(obstacleLocations);
+var moon = new ex.Actor(500, 0, 471, 152);
+moon.collisionType = ex.CollisionType.PreventCollision;
+moon.addDrawing("default", new ex.Sprite(Resources.TextureMoon, 0, 0, 471, 152));
+moon.anchor.x = moon.anchor.y = 0;
+moon.dx = -1;
+
+var logo: ex.Actor;
+var tree: ex.Actor;
 
 var startGame = () => {
    if (game.currentScene !== mainLevel) {
       game.off("keyup", startGame);
 
-      game.addScene("level", mainLevel);
-      game.addScene("victory", new VictoryScene());
-      game.addScene("defeat", new DefeatScene());
-
-      game.on("keyup", startGame);
       game.goToScene("level");
    }
 }
@@ -56,13 +59,13 @@ game.start(loader).then(() => {
    game.addChild(startScreen);
 
    // moon
-   Parallax.create(game.currentScene, 500, 0, 471, 152, Resources.TextureMoon, 1);
+   game.add(moon);
 
    // mountains
    Parallax.create(game.currentScene, 0, 0, game.width, game.height, Resources.TextureMountains, 0);
 
    // tree
-   var tree = new ex.Actor(300, Config.obstacleYPosition + 15, 385, 519);
+   tree = new ex.Actor(300, Config.obstacleYPosition + 15, 385, 519);
    tree.anchor.y = 1;
    tree.collisionType = ex.CollisionType.PreventCollision;
    tree.addDrawing("default", new ex.Sprite(Resources.TextureTree1, 0, 0, 385, 519));
@@ -77,7 +80,7 @@ game.start(loader).then(() => {
    ground.collisionType = ex.CollisionType.Fixed;
    game.add(ground);
 
-   var logo = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);
+   logo = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);   
    logo.addDrawing("logo", new ex.Sprite(Resources.TextureLogo, -400, -300, game.width, game.height));
    logo.collisionType = ex.CollisionType.PreventCollision;
    game.addChild(logo);
