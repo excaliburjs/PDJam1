@@ -60,6 +60,8 @@ game.start(loader).then(() => {
    startScreen.collisionType = ex.CollisionType.PreventCollision;
    game.addChild(startScreen);
 
+
+
    // moon
    game.add(moon);
 

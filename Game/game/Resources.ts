@@ -10,6 +10,7 @@
    TextureLogo: new ex.Texture("images/logo.png"),
    TextureFence: new ex.Texture("images/fence.png"),
    TextureRock1: new ex.Texture("images/rock1.gif"),
+   TextureHorse: new ex.Texture("images/horse.png"),
 
    //
    // Sounds

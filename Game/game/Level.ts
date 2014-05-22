@@ -38,13 +38,31 @@
          this.addChild(obstacle);
       }
 
+      var horseSpriteSheet = new ex.SpriteSheet(Resources.TextureHorse, 14, 1, 400, 281);
+      var horseAnimRed = horseSpriteSheet.getAnimationForAll(game, 35);
+      var horseAnimGray = horseSpriteSheet.getAnimationForAll(game, 35);
+      horseAnimRed.loop = true;
+      horseAnimRed.setScaleX(.5);
+      horseAnimRed.setScaleY(.5);
+
+      horseAnimGray.loop = true;
+      horseAnimGray.setScaleX(.5);
+      horseAnimGray.setScaleY(.5);
+
+      horseAnimRed.addEffect(new ex.Effects.Colorize(ex.Color.fromHex("#151515")));
+      horseAnimGray.addEffect(new ex.Effects.Colorize(ex.Color.fromHex("#39465a")));
+
       // headless horseman
       var horseman = new Enemy(Config.horsemanXPos, Config.horsemanYPos, ex.Color.Red);
+      horseman.addDrawing("default", horseAnimRed);
       this.addChild(horseman);
 
       // player
       var ichabod = new Player(Config.playerXPos, Config.playerYPos, ex.Color.Blue);
+      ichabod.setCenterDrawing(true);
+      ichabod.setWidth(100);
       ichabod.collisionType = ex.CollisionType.PreventCollision;
+      ichabod.addDrawing("default", horseAnimGray);
       this.addChild(ichabod);
 
       var victoryTrigger = new ParallaxTrigger(15000, Config.obstacleYPosition, 50, 200, () => {

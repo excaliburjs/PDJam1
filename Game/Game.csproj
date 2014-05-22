@@ -21,6 +21,8 @@
     <Content Include="app.js" />
     <Content Include="images\background.gif" />
     <Content Include="images\fence.png" />
+    <Content Include="images\fence.gif" />
+    <Content Include="images\horse.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\moon.png" />
     <Content Include="images\mountains.png" />
@@ -73,7 +75,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49263</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
