@@ -9,6 +9,8 @@
 
 var logger = ex.Logger.getInstance();
 
+var statsProgress;
+
 var game = new ex.Engine(960, 600, "game");
 game.setAntialiasing(false);
 game.backgroundColor = ex.Color.Black;
@@ -108,7 +110,6 @@ game.start(loader).then(() => {
 
    game.addScene("level", mainLevel);
    game.addScene("victory", new VictoryScene());
-   game.addScene("defeat", new DefeatScene());
 
    game.on("keyup", startGame);
 });

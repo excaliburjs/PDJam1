@@ -11,7 +11,7 @@
 }
 
 class ParallaxActor extends ex.Actor {
-   
+
    constructor(x: number, y: number, width: number, height: number, texture: ex.Texture, private speed: number) {
       super(x, y, width, height);
       this.anchor.x = this.anchor.y = 0;
@@ -26,16 +26,27 @@ class ParallaxActor extends ex.Actor {
          this.x = this.speed > 0 ? this.x - (this.getWidth() * 2) : this.x + (this.getWidth() * 2);
       }
 
+
       super.update(engine, delta);      
    }
 } 
 
 class ParallaxTrigger extends ex.Trigger {
+   private _startingXPos: number;
+   public distanceTravelled: number = 0;
 
    constructor(x: number, y: number, width: number, height: number, action: () => void, private speed: number) {
       super(x, y, width, height, action);
       this.repeats = -1;
 
       this.dx = speed;
+      this._startingXPos = this.x;
    }
+
+   public update(engine: ex.Engine, delta: number) {
+      this.distanceTravelled = Math.abs(this.x - this._startingXPos);
+      statsProgress = this.distanceTravelled;
+      super.update(engine, delta);
+   }
+
 }

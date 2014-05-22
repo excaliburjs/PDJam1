@@ -30,6 +30,7 @@
 
       this.on('collision', (ev: ex.CollisionEvent) => {
          if (ev.other instanceof Obstacle) {
+            game.addScene("defeat", new DefeatScene(statsProgress));
             game.goToScene("defeat");
             //this.color = ex.Color.Magenta;
          }
