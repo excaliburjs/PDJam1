@@ -20,7 +20,7 @@
     <Content Include="app.css" />
     <Content Include="app.js" />
     <Content Include="images\background.gif" />
-    <Content Include="images\fence.gif" />
+    <Content Include="images\fence.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\moon.png" />
     <Content Include="images\mountains.png" />
