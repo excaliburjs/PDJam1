@@ -75,7 +75,7 @@ game.start(loader).then(() => {
    Parallax.create(game.currentScene, 0, 0, game.width, game.height, Resources.TextureFence, 0);
 
    // ground
-   var ground = new ex.Actor(0, Config.obstacleYPosition, game.width, 60, ex.Color.Black);
+   var ground = new ex.Actor(0, Config.obstacleYPosition, game.width, 60, ex.Color.fromHex("#0f1722"));
    ground.anchor.x = ground.anchor.y = 0;
    ground.collisionType = ex.CollisionType.Fixed;
    game.add(ground);

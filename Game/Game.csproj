@@ -24,6 +24,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\moon.png" />
     <Content Include="images\mountains.png" />
+    <Content Include="images\rock1.gif" />
     <Content Include="images\tree-1.gif" />
     <Content Include="index.html" />
     <Content Include="scripts\Excalibur.js" />

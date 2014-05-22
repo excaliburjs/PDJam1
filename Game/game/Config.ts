@@ -9,7 +9,8 @@
    
    // obstacles
    static obstacleWidth: number = 50;
-   static obstacleHeight: number = 50;
+   static obstacleHeight: number = 30;
+   static obstableOffsetHeight: number = 5;
    static obstacleColor: ex.Color = ex.Color.Orange;
    static obstacleYPosition: number = 600 - 55;
 

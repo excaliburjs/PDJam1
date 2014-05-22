@@ -25,18 +25,18 @@
       // fence
       Parallax.create(this, 0, 0, game.width, game.height, Resources.TextureFence, -Config.playerMovementSpeed);      
 
-      // obstacles
-      for (var i = 0; i < obstacleLocations.length; i++) {
-         var obstacle = new Obstacle(obstacleLocations[i], Config.obstacleYPosition, Config.obstacleColor);
-         this.obstacles.push(obstacle);
-         this.addChild(obstacle);
-      }
-
       // ground
-      var floor = new ex.Actor(0, Config.obstacleYPosition, game.width, 60, ex.Color.Black);
+      var floor = new ex.Actor(0, Config.obstacleYPosition, game.width, 60, ex.Color.fromHex("#0f1722"));
       floor.anchor.x = floor.anchor.y = 0;
       floor.collisionType = ex.CollisionType.Fixed;
       this.addChild(floor);
+
+      // obstacles
+      for (var i = 0; i < obstacleLocations.length; i++) {
+         var obstacle = new Obstacle(obstacleLocations[i], Config.obstacleYPosition);
+         this.obstacles.push(obstacle);
+         this.addChild(obstacle);
+      }
 
       // headless horseman
       var horseman = new Enemy(Config.horsemanXPos, Config.horsemanYPos, ex.Color.Red);
