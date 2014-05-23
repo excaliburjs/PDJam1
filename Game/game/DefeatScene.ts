@@ -29,11 +29,11 @@
       labelDefeatStory1.color = ex.Color.White;
       this.addChild(labelDefeatStory1);
 
-      var labelDefeatStory2 = new ex.Label("from the back of old Gunpowder. As he lay there in", 50, 240, '25px Architects Daughter');
+      var labelDefeatStory2 = new ex.Label("from the back of old Gunpowder. As he lay there on", 50, 240, '25px Architects Daughter');
       labelDefeatStory2.color = ex.Color.White;
       this.addChild(labelDefeatStory2);
 
-      var labelDefeatStory3 = new ex.Label("the brambles, he felt darkness overtake his senses.", 50, 280, '25px Architects Daughter');
+      var labelDefeatStory3 = new ex.Label("the ground, he felt darkness overtake his senses.", 50, 280, '25px Architects Daughter');
       labelDefeatStory3.color = ex.Color.White;
       this.addChild(labelDefeatStory3);
 
