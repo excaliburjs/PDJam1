@@ -90,9 +90,20 @@
       ichabod.addChild(rider);
       this.addChild(ichabod);
 
+
+      // bridge
+      var bridgeSprite = new ex.Sprite(Resources.TextureBridge, 0, 0, 315, 111);
+      var bridge = new ex.Actor(15000, Config.obstacleYPosition, 315, 111);
+      
+      bridge.collisionType = ex.CollisionType.PreventCollision;
+      bridge.dx = -Config.playerMovementSpeed;
+      bridge.addDrawing("default", bridgeSprite);
+      this.add(bridge);
+
       var victoryTrigger = new ParallaxTrigger(15000, Config.obstacleYPosition, 50, 200, () => {
          game.goToScene("victory");
       }, -Config.playerMovementSpeed);
+      
       victoryTrigger.repeats = -1;
       victoryTrigger.target = ichabod;
       game.addChild(victoryTrigger);
