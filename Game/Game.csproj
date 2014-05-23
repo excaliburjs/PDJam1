@@ -19,6 +19,9 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="app.js" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="images\background.gif" />
     <Content Include="images\fence.png" />
     <Content Include="images\fence.gif" />
@@ -41,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\Excalibur.js.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -60,6 +67,7 @@
     <TypeScriptCompile Include="game\Parallax.ts" />
     <TypeScriptCompile Include="game\Player.ts" />
     <TypeScriptCompile Include="game\Resources.ts" />
+    <TypeScriptCompile Include="game\Util.ts" />
     <TypeScriptCompile Include="game\VictoryScene.ts" />
     <TypeScriptCompile Include="scripts\Excalibur.d.ts" />
   </ItemGroup>

@@ -12,3 +12,13 @@
 span {
     font-style: italic;
 }
+
+#wrapper {
+    position: relative;
+}
+
+#sound {
+    left: 10px;
+    bottom: 10px;
+    position: absolute;
+}

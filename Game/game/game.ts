@@ -6,6 +6,18 @@
 /// <reference path="VictoryScene.ts" />
 /// <reference path="DefeatScene.ts" />
 /// <reference path="Resources.ts"/>
+/// <reference path="Util.ts"/>
+
+document.getElementById("sound").addEventListener('click', function () {
+   if (hasClass(this, 'fa-volume-up')) {
+      replaceClass(this, 'fa-volume-up', 'fa-volume-off');
+      setVolume(0);
+
+   } else {
+      replaceClass(this, 'fa-volume-off', 'fa-volume-up');
+      setVolume(1);
+   }
+});
 
 var logger = ex.Logger.getInstance();
 
