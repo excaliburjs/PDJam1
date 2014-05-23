@@ -19,6 +19,7 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="app.js" />
+    <Content Include="credits.html" />
     <Content Include="images\background.gif" />
     <Content Include="images\fence.png" />
     <Content Include="images\fence.gif" />
