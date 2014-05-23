@@ -38,9 +38,30 @@
          this.addChild(obstacle);
       }
 
+      var riderSpriteSheet = new ex.SpriteSheet(Resources.TextureRider, 4, 1, 150, 233);
+      var riderAnim = riderSpriteSheet.getAnimationForAll(game, 35 * 4);
+      riderAnim.loop = true;
+      riderAnim.setScaleX(.5);
+      riderAnim.setScaleY(.5);
+      var rider = new ex.Actor(20, -30, 100, 100);
+      rider.addDrawing("default", riderAnim);
+      rider.setCenterDrawing(true);
+      
+      var headlessSpriteSheet = new ex.SpriteSheet(Resources.TextureHeadless, 4, 1, 150, 233);
+      var headlessAnim = headlessSpriteSheet.getAnimationForAll(game, 35 * 4);
+      headlessAnim.loop = true;
+      headlessAnim.setScaleX(.5);
+      headlessAnim.setScaleY(.5);
+      headlessAnim.skip(3);
+      var headless = new ex.Actor(20, -30, 100, 100);
+      headless.addDrawing("default", headlessAnim);
+      headless.setCenterDrawing(true);
+
       var horseSpriteSheet = new ex.SpriteSheet(Resources.TextureHorse, 14, 1, 400, 281);
       var horseAnimRed = horseSpriteSheet.getAnimationForAll(game, 35);
       var horseAnimGray = horseSpriteSheet.getAnimationForAll(game, 35);
+
+      horseAnimRed.skip(6);
       horseAnimRed.loop = true;
       horseAnimRed.setScaleX(.5);
       horseAnimRed.setScaleY(.5);
@@ -54,7 +75,10 @@
 
       // headless horseman
       var horseman = new Enemy(Config.horsemanXPos, Config.horsemanYPos, ex.Color.Red);
+      horseman.setCenterDrawing(true);
+      horseman.setWidth(100);
       horseman.addDrawing("default", horseAnimRed);
+      horseman.addChild(headless);
       this.addChild(horseman);
 
       // player
@@ -63,6 +87,7 @@
       ichabod.setWidth(100);
       ichabod.collisionType = ex.CollisionType.PreventCollision;
       ichabod.addDrawing("default", horseAnimGray);
+      ichabod.addChild(rider);
       this.addChild(ichabod);
 
       var victoryTrigger = new ParallaxTrigger(15000, Config.obstacleYPosition, 50, 200, () => {

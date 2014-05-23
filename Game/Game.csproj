@@ -26,6 +26,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\moon.png" />
     <Content Include="images\mountains.png" />
+    <Content Include="images\rider.png" />
     <Content Include="images\rock1.gif" />
     <Content Include="images\tree-1.gif" />
     <Content Include="index.html" />
