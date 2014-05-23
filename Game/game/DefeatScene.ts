@@ -10,9 +10,11 @@
    public onInitialize(engine: ex.Engine): void {
       super.onInitialize(engine);
 
-      var death = new ex.Actor(0, 0, engine.canvas.width, engine.canvas.height);
-      game.addChild(death);
-      game.camera.setActorToFollow(death);
+      var defeatScreen = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);
+      defeatScreen.addDrawing("background", new ex.Sprite(Resources.TextureBackground, 0, 0, game.width, game.height));
+      defeatScreen.collisionType = ex.CollisionType.PreventCollision;
+      game.camera.setActorToFollow(defeatScreen);
+      game.addChild(defeatScreen);
 
       game.camera = new ex.BaseCamera(engine);
 
