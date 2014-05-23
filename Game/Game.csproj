@@ -24,8 +24,10 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="credits.html" />
     <Content Include="images\background.gif" />
+    <Content Include="images\Bridge.png" />
     <Content Include="images\fence.png" />
     <Content Include="images\fence.gif" />
+    <Content Include="images\headless.png" />
     <Content Include="images\horse.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\moon.png" />
