@@ -1,4 +1,4 @@
-PDJam1
-======
+Sleepy Hollow (PDJam1)
+===========================
 
-Repository for the Public Domain Jam
+The core Excalibur dev team's Public Domain Jam repo for *Sleepy Hollow*.
