@@ -37,13 +37,19 @@
       labelDefeatStory3.color = ex.Color.White;
       this.addChild(labelDefeatStory3);
 
+      var restartInstructions = new ex.Label("Press UP to try again", w, 500, '35px Architects Daughter');
+      restartInstructions.color = ex.Color.White;
+      restartInstructions.textAlign = ex.TextAlign.Center;
+      this.addChild(restartInstructions);
+
       //var distance = new ex.Label("distance: " + this.distanceTravelled, game.getWidth() / 2, 300 + game.getHeight() / 2, '50px Segoe UI');
       //distance.color = ex.Color.White;
       //this.addChild(distance);
 
-      //this.on("keyup", (ev: ex.KeyUp) => {
-      //   window.location.reload()
-      //});
+      game.on("keyup", (ev: ex.KeyUp) => {
+         window.location = window.location;
+         window.location.reload();
+      });
 
    }
 }

@@ -95,11 +95,18 @@ game.start(loader).then(() => {
    ground.anchor.x = ground.anchor.y = 0;
    ground.collisionType = ex.CollisionType.Fixed;
    game.add(ground);
-
+   
+   // logo
    logo = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);   
    logo.addDrawing("logo", new ex.Sprite(Resources.TextureLogo, -400, -300, game.width, game.height));
    logo.collisionType = ex.CollisionType.PreventCollision;
    game.addChild(logo);
+
+   // start instructions
+   var startInstructions = new ex.Label("Press UP to start running", game.getWidth()/2, 580, '30px Architects Daughter');
+   startInstructions.color = ex.Color.White;
+   startInstructions.textAlign = ex.TextAlign.Center;
+   game.addChild(startInstructions);
 
    var emitter = new ex.ParticleEmitter(0, Config.obstacleYPosition, 960, 0);
    emitter.emitterType = ex.EmitterType.Rectangle;
