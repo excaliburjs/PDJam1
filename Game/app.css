@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Architects Daughter'; 
     background: black;
     color: white;
     text-align: center;
@@ -24,10 +24,17 @@ span {
     position: absolute;
 }
 p { 
-       font-family: 'Architects Daughter'; 
-       font-weight: normal; 
-       font-style: normal;
-       color: white;
+    font-family: 'Architects Daughter'; 
+    font-weight: normal; 
+    font-style: normal;
+    color: white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 50px;
 }
 
 a {
