@@ -9,9 +9,11 @@
 
       game.camera = new ex.BaseCamera(engine);
 
-      var victory = new ex.Actor(0, 0, engine.canvas.width, engine.canvas.height);
-      game.addChild(victory);
-      game.camera.setActorToFollow(victory);
+      var victoryScreen = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);
+      victoryScreen.addDrawing("background", new ex.Sprite(Resources.TextureBackground, 0, 0, game.width, game.height));
+      victoryScreen.collisionType = ex.CollisionType.PreventCollision;
+      game.camera.setActorToFollow(victoryScreen);
+      game.addChild(victoryScreen);
 
       var labelVictory = new ex.Label("Victory", game.getWidth() / 2, 100, '50px Architects Daughter');
       labelVictory.color = ex.Color.White;

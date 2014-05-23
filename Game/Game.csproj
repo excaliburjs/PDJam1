@@ -22,6 +22,7 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="credits.html" />
     <Content Include="images\background.gif" />
     <Content Include="images\fence.png" />
     <Content Include="images\fence.gif" />

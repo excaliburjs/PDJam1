@@ -2,6 +2,7 @@
     font-family: 'Segoe UI', sans-serif;
     background: black;
     color: white;
+    text-align: center;
 }
 
 #wrapper {
@@ -21,4 +22,14 @@ span {
     left: 10px;
     bottom: 10px;
     position: absolute;
+}
+p { 
+       font-family: 'Architects Daughter'; 
+       font-weight: normal; 
+       font-style: normal;
+       color: white;
+}
+
+a {
+    color: white;
 }
