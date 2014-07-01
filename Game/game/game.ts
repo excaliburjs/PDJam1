@@ -97,8 +97,9 @@ game.start(loader).then(() => {
    game.add(ground);
    
    // logo
-   logo = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);   
-   logo.addDrawing("logo", new ex.Sprite(Resources.TextureLogo, -400, -300, game.width, game.height));
+   logo = new ex.Actor(600, 350, game.width, game.height);
+   logo.setCenterDrawing(true);
+   logo.addDrawing("logo", new ex.Sprite(Resources.TextureLogo, 0, 0, 406, 115));
    logo.collisionType = ex.CollisionType.PreventCollision;
    game.addChild(logo);
 

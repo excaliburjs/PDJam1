@@ -4998,11 +4998,6 @@ var ex;
             }
         };
 
-        /**
-        * Skips ahead a specified number of frames in the animation
-        * @method skip
-        * @param frames {number} Frames to skip ahead
-        */
         Animation.prototype.skip = function (frames) {
             this.currIndex = (this.currIndex + frames) % this.sprites.length;
         };

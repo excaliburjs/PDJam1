@@ -167,7 +167,7 @@ var Level = (function (_super) {
             this.addChild(obstacle);
         }
 
-        var riderSpriteSheet = new ex.SpriteSheet(Resources.TextureRider, 4, 1, 150, 233);
+        var riderSpriteSheet = new ex.SpriteSheet(Resources.TextureRider, 4, 1, 150, 223);
         var riderAnim = riderSpriteSheet.getAnimationForAll(game, 35 * 4);
         riderAnim.loop = true;
         riderAnim.setScaleX(.5);
@@ -176,7 +176,7 @@ var Level = (function (_super) {
         rider.addDrawing("default", riderAnim);
         rider.setCenterDrawing(true);
 
-        var headlessSpriteSheet = new ex.SpriteSheet(Resources.TextureHeadless, 4, 1, 150, 233);
+        var headlessSpriteSheet = new ex.SpriteSheet(Resources.TextureHeadless, 4, 1, 150, 223);
         var headlessAnim = headlessSpriteSheet.getAnimationForAll(game, 35 * 4);
         headlessAnim.loop = true;
         headlessAnim.setScaleX(.5);
@@ -560,8 +560,9 @@ game.start(loader).then(function () {
     game.add(ground);
 
     // logo
-    logo = new ex.Actor(game.width / 2, game.height / 2, game.width, game.height);
-    logo.addDrawing("logo", new ex.Sprite(Resources.TextureLogo, -400, -300, game.width, game.height));
+    logo = new ex.Actor(600, 350, game.width, game.height);
+    logo.setCenterDrawing(true);
+    logo.addDrawing("logo", new ex.Sprite(Resources.TextureLogo, 0, 0, 406, 115));
     logo.collisionType = 0 /* PreventCollision */;
     game.addChild(logo);
 

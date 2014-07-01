@@ -38,7 +38,7 @@
          this.addChild(obstacle);
       }
 
-      var riderSpriteSheet = new ex.SpriteSheet(Resources.TextureRider, 4, 1, 150, 233);
+      var riderSpriteSheet = new ex.SpriteSheet(Resources.TextureRider, 4, 1, 150, 223);
       var riderAnim = riderSpriteSheet.getAnimationForAll(game, 35 * 4);
       riderAnim.loop = true;
       riderAnim.setScaleX(.5);
@@ -47,7 +47,7 @@
       rider.addDrawing("default", riderAnim);
       rider.setCenterDrawing(true);
       
-      var headlessSpriteSheet = new ex.SpriteSheet(Resources.TextureHeadless, 4, 1, 150, 233);
+      var headlessSpriteSheet = new ex.SpriteSheet(Resources.TextureHeadless, 4, 1, 150, 223);
       var headlessAnim = headlessSpriteSheet.getAnimationForAll(game, 35 * 4);
       headlessAnim.loop = true;
       headlessAnim.setScaleX(.5);

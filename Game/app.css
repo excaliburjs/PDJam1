@@ -1,4 +1,9 @@
-﻿body {
+﻿@font-face {
+      font-family: 'Architects Daughter';
+      src: url('fonts/ArchitectsDaughter.ttf');
+    }
+
+body {
     font-family: 'Architects Daughter'; 
     background: black;
     color: white;

@@ -2937,11 +2937,6 @@ declare module ex {
         * @method tick
         */
         public tick(): void;
-        /**
-        * Skips ahead a specified number of frames in the animation
-        * @method skip
-        * @param frames {number} Frames to skip ahead
-        */
         public skip(frames: number): void;
         public draw(ctx: CanvasRenderingContext2D, x: number, y: number): void;
         /**
